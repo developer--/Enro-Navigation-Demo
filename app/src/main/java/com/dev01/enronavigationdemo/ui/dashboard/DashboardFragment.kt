@@ -9,7 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.dev01.enronavigationdemo.R
+import kotlinx.android.parcel.Parcelize
+import nav.enro.annotations.NavigationDestination
+import nav.enro.core.NavigationKey
 
+@Parcelize
+class Dashboard : NavigationKey
+
+@NavigationDestination(key = Dashboard::class)
 class DashboardFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
